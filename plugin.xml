@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-keychain-store"
+    version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>KeychainStore</name>
+    <author>ruanchengzhi</author>
+
+    <description>
+        Cordova plugin for securely saving keys, passwords or strings on devices.
+    </description>
+
+    <license>ISC</license>
+
+    <keywords>ecosystem:cordova, ecosystem:phonegap, mobile, android, ios, android-keystore, ios-keychain, sensitive-data-security, public-private-key, encryption-decryption</keywords>
+
+    <js-module name="KeychainStore" src="www/KeychainStore.js">
+        <clobbers target="cordova.plugins.KeychainStore" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="KeychainStore">
+                <param name="android-package" value="com.keychainstore.plugin.KeychainStore" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/KeychainStore.java" target-dir="src/com/keychainstore/plugin" />
+        <source-file src="src/android/Constants.java" target-dir="src/com/keychainstore/plugin" />
+        <source-file src="src/android/KeyStorage.java" target-dir="src/com/keychainstore/plugin" />
+    </platform>
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="KeychainStore">
+                <param name="ios-package" value="FDKeychainPlugin" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/FDKeychain.h"/>
+        <header-file src="src/ios/FDKeychainPlugin.h" />
+
+        <source-file src="src/ios/FDKeychain.m"/>
+        <source-file src="src/ios/FDKeychainPlugin.m" />
+        <framework src="Security.framework" />        
+    </platform>
+
+</plugin>

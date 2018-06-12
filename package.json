@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-keychain-store",
+  "version": "1.0.0",
+  "description": "Cordova plugin for securely saving keys, passwords or strings on devices.",
+  "cordova": {
+    "id": "cordova-plugin-keychain-store",
+    "platforms": ["android", "ios"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruanchengzhi/cordova-plugin-keychain-store.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "ecosystem:phonegap",
+    "mobile",
+    "android",
+    "ios",
+    "android-keystore",
+    "ios-keychain",
+    "sensitive-data-security",
+    "encryption-decryption",
+    "public-private-key"
+  ],
+  "author": "pradeep singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "git+https://github.com/ruanchengzhi/cordova-plugin-keychain-store/issues"
+  },
+  "homepage": "git+https://github.com/ruanchengzhi/cordova-plugin-keychain-store#readme"
+}
